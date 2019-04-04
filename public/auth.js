@@ -1,13 +1,3 @@
-var config = {
-    apiKey: "AIzaSyB1Yqn81a-cHCDa8qwIh9W7vCVXA2Db-ko",
-    authDomain: "erkcurley-161201.firebaseapp.com",
-    databaseURL: "https://erkcurley-161201.firebaseio.com",
-    projectId: "erkcurley-161201",
-    storageBucket: "erkcurley-161201.appspot.com",
-    messagingSenderId: "1029261720125"
-};
-firebase.initializeApp(config);
-
 // Initialize the FirebaseUI Widget using Firebase.
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
@@ -31,7 +21,7 @@ var uiConfig = {
   },
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
-  signInSuccessUrl: '/home.html',
+  // signInSuccessUrl: '/home.html',
   signInOptions: [
     // Leave the lines as is for the providers you want to offer your users.
     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
@@ -49,5 +39,3 @@ var uiConfig = {
 
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
-console.log("I'm here")
-console.log(firebase.auth().currentUser.email)
