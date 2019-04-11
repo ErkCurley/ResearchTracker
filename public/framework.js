@@ -1,0 +1,5 @@
+function loadFramework(){
+    loadNavbar()
+    // fillInterface()
+
+}
